@@ -49,7 +49,7 @@ public class CasualDressPageTest extends BaseProperties {
         ax.moveToElement(wpage.findCasualDress()).click().perform();
         //log.info("Casual dress is selected");
         Thread.sleep(2000);
-        Assert.assertEquals(cdp.getCasualPageTitle(), "Casual Dresses -My Store");
+        Assert.assertEquals(cdp.getCasualPageTitle(), "Casual Dresses - My Store ");
     }
 
     @Test(enabled = false,priority = 7)
@@ -77,14 +77,14 @@ public class CasualDressPageTest extends BaseProperties {
         }
     }
 
-    @Test(priority = 9)
+    @Test(priority = 9, dependsOnMethods = "selectDress")
     public void validateCartMessage() {
         String msg = cdp.cartMessage();
         System.out.println(msg);
         Assert.assertEquals(msg, prop.getProperty("productAddedMessage"));
     }
 
-    @Test(priority = 10)
+    @Test(priority = 10, dependsOnMethods = "validateCartMessage")
     public void validateTotalCost() {
         float productCost = cdp.totalProductCost();
         //System.out.println(productCost);
