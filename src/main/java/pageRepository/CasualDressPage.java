@@ -30,8 +30,11 @@ public class CasualDressPage extends BaseProperties {
     @FindBy(xpath = "//*[@class='clearfix']//*[@class='ajax_block_cart_total']")
     WebElement totalCost;
 
+    @FindBy(xpath = "//*[@title='Proceed to checkout']")
+    WebElement checkoutbtn;
 
-    public CasualDressPage() {
+
+public CasualDressPage() {
         PageFactory.initElements(driver, this);
     }
 
@@ -68,7 +71,6 @@ public class CasualDressPage extends BaseProperties {
 
     public float totalCalcCost() {
         String b= totalCost.getText().substring(1);
-        //String[] c = b.split(".");
         float total = Float.parseFloat(b);
         System.out.println(total);
         return total;
@@ -76,6 +78,11 @@ public class CasualDressPage extends BaseProperties {
 
     public String cartMessage() {
         return message.getText();
+    }
+
+    public WebElement checkoutbtn()
+    {
+        return checkoutbtn;
     }
 
 }

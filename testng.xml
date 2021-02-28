@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="E2ESampleProject.Listeners"/> </listeners>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ab374mi/IdeaProjects/End2EndSampleProject/src/test/java/E2ESampleProject" thread-count="3">
+        <classes>
+        <class name="E2ESampleProject.HomePageTest">
+         <methods>
+                  <include name="searchTest"/>
+                  <include name="selectDress"/>
+              </methods>
+          </class>
+        </classes>
+        </test>
+     <test name="Csual Dress Test">
+         <classes>
+      <class name="E2ESampleProject.CasualDressPageTest">
+          <methods>
+                 <include name="validatePageTitle"/>
+                 <include name="selectSize"/>
+                 <include name="selectDress"/>
+                 <include name="validateCartMessage"/>
+                 <include name="validateTotalCost"/>
+             </methods>
+         </class>
+         </classes>
+     </test>
+    <test name="Home Page Test">
+        <classes>
+            <class name="E2ESampleProject.WomenPageTest">
+               <methods>
+                    <include name="validateHomePageTitle"/>
+                    <include name="clickWomenTab"/>
+                    <include name="selectCasualDress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

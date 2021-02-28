@@ -1,0 +1,9 @@
+21:21:40.325 [main] ERROR Pkg2.LogClassTwo - it is an error
+21:21:40.330 [main] FATAL Pkg2.LogClassTwo - Fatal error
+21:22:09.514 [main] INFO  Pkg2.LogClassTwo - Running from log file
+21:22:09.517 [main] ERROR Pkg2.LogClassTwo - it is an error
+21:22:09.517 [main] FATAL Pkg2.LogClassTwo - Fatal error
+21:22:18.096 [main] INFO  Pkg2.LogClassTwo - Running from log file
+21:22:18.098 [main] ERROR Pkg2.LogClassTwo - it is an error
+21:22:18.098 [main] FATAL Pkg2.LogClassTwo - Fatal error
+23:07:19.231 [main] INFO  Pkg2.LogClassTwo - Test started
